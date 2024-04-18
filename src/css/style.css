@@ -1,0 +1,304 @@
+body{
+    display: grid;
+    grid-template-areas: "cabecalho cabecalho"
+                         "home home"
+                         "secao secao"
+                         "cadastro cadastro"
+                         "rodape rodape";
+    grid-template-columns: 1fr 1fr;
+}
+
+.cabecalho{
+    grid-area: cabecalho;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 80px 80px;
+}
+
+.cabecalho nav ul{
+    display: flex;
+    gap: 55px;
+    font-family: var(--font-raleway);
+    font-weight: 500;
+}
+
+.home{
+    grid-area: home;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    padding: 0 80px;
+}
+
+.home .info{
+    max-width: 540px;
+}
+
+.home .info h2{
+    font-family: var(--font-raleway);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 15px;
+}
+
+.home .info p{
+    font-family: var(--font-open-sans);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.home .info .email{
+    display: flex;
+    gap: 15px;
+}
+
+.home .info .form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.home .info .btn-iniciar{
+    width: 180px;
+    height: 40px;
+    background-color: var(--Bright-Blue);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 3px 3px 10px 3px var(--Light-Gray);
+}
+
+.home .info .btn-iniciar:hover::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.home .image-1{
+    max-width: 50%;
+}
+
+.secao{
+    grid-area: secao;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: url(../images/bg-curve-desktop.svg) center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 80px;
+}
+
+.secao .container .info{
+    margin-bottom: 50px;
+}
+
+.secao .container .info h2{
+    font-family: var(--font-open-sans);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.secao .container .info p{
+    font-family: var(--font-open-sans);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    max-width: 540px;
+}
+
+.secao .container .info a{
+    font-family: var(--font-open-sans);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Moderate-Cyan);
+    border-bottom: 2px solid var(--Moderate-Cyan);
+}
+
+.secao .container .fala-ceo{
+    width: 350px;
+    background-color: var(--Light-Grayish-Blue);
+    box-shadow: 0 0 20px 2px var(--Light-Gray);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.secao .container .fala-ceo p{
+    font-family: var(--font-open-sans);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.secao .container .fala-ceo .perfil{
+    display: flex;
+    align-items: center;
+    line-height: 13px;
+}
+
+.secao .container .fala-ceo .perfil .nome-ceo{
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.secao .container .fala-ceo .perfil span{
+    font-family: var(--font-open-sans);
+    font-size: 8px;
+}
+
+.secao .container .fala-ceo .perfil .avatar{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.secao .container .fala-ceo .perfil{
+    display: flex;
+}
+
+.secao .image-2{
+    max-width: 45%;
+}
+
+.cadastro{
+    grid-area: cadastro;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--Desaturated-Blue);
+    padding: 100px 80px;
+}
+
+.cadastro .info{
+    max-width: 500px;
+}
+
+.cadastro .info h2{
+    font-family: var(--font-open-sans);
+    font-size: 30px;
+    color: var(--Light-Grayish-Blue);
+    margin-bottom: 30px;
+}
+
+.cadastro .info p{
+    font-family: var(--font-open-sans);
+    font-weight: 400;
+    color: var(--Light-Grayish-Blue);
+}
+
+.cadastro .email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.cadastro .email .started-free form input{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.cadastro .email .btn-iniciar{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--Bright-Blue);
+    color: var(--Light-Grayish-Blue);
+    font-family: var(--font-raleway);
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+}
+
+.cadastro .email .btn-iniciar:hover::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.rodape{
+    grid-area: rodape;
+    background-color: var(--Very-Dark-Blue);
+    padding: 80px;
+}
+
+.rodape .info{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 200px;
+}
+
+.rodape .logo{
+    filter: grayscale(100%) invert(100%) brightness(1000%);
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.rodape .info li{
+    font-family: var(--font-open-sans);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Light-Grayish-Blue);
+    margin-bottom: 10px;
+}
+
+.rodape .info img{
+    margin-right: 10px;
+}
+
+.rodape .info li:hover{
+    color: var(--Desaturated-Blue);
+}
+
+.rodape .info .container img{
+    margin-right: 15px;
+}
+
+.rodape .info .social ul{
+    display: flex;
+}
+
+.rodape .info .social ul li{
+    margin-right: 15px;
+}
+
+.rodape .info .social ul li a i{
+    color: var(--Light-Grayish-Blue);
+    font-size: 14px;
+    border: 1px solid var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape .info .social ul li a:hover i {
+    color: var(--Bright-Blue);
+    border-color: var(--Bright-Blue);
+}
